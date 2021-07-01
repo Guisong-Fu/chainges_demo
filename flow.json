@@ -1,0 +1,72 @@
+{
+    "emulators": {
+        "default": {
+            "port": 3569,
+            "serviceAccount": "emulator-account"
+        }
+    },
+    "contracts": {
+        "ChaingesFungibleTokenContract": "./cadence/contracts/ChaingesFungibleTokenContract.cdc",
+        "ChaingesNFTContract": "./cadence/contracts/ChaingesNFTContract.cdc",
+        "ChaingesMarketplaceContract": "./cadence/contracts/ChaingesMarketplaceContract.cdc",
+        "NonFungibleTokenContract": "./cadence/contracts/NonFungibleTokenContract.cdc",
+        "MarketplaceContract": "./cadence/contracts/MarketplaceContract.cdc"
+    },
+    "networks": {
+        "emulator": {
+            "host": "127.0.0.1:3569",
+            "chain": "flow-emulator"
+        },
+        "testnet": {
+            "host": "access.devnet.nodes.onflow.org:9000",
+            "chain": "flow-testnet"
+        },
+        "mainnet": {
+            "host": "access.mainnet.nodes.onflow.org:9000",
+            "chain": "flow-mainnet"
+        }
+    },
+    "accounts": {
+        "emulator-account": {
+            "address": "f8d6e0586b0a20c7",
+            "keys": "593e5b6d18a6861facc5bdf38041c245b3109d4b855384ac7c52cca6e2829987",
+            "chain": "flow-emulator"
+        },
+        "second-account": {
+            "address": "01cf0e2f2f715450",
+            "keys": "c020958c4dbb90851d9df4614441712ef28346dcfa0808bc451854918ba0c953",
+            "chain": "flow-emulator"
+        },
+        "third-account": {
+            "address": "179b6b1cb6755e31",
+            "keys": "e1f0acb5195ae02a23f320907ba65b55e1bac3f8e8b12968ab86a1bd4a718010",
+            "chain": "flow-emulator"
+        },
+        "forth-account": {
+            "address": "f3fcd2c1a78f5eee",
+            "keys": "e1f0acb5195ae02a23f320907ba65b55e1bac3f8e8b12968ab86a1bd4a718010",
+            "chain": "flow-emulator"
+        },
+        "testnet-account": {
+            "address": "27292e2145d5bb72",
+            "keys": "3475ea63fa4c30728a97273328073d19e82f9ffa7f1efc4659eb193ead5883f2",
+            "chain": "flow-testnet"
+        }
+    },
+    "deployments": {
+        "emulator": {
+            "emulator-account": [
+                "NonFungibleTokenContract",
+                "ChaingesFungibleTokenContract",
+                "MarketplaceContract"
+            ]
+        },
+        "testnet": {
+            "testnet-account": [
+                "ChaingesFungibleTokenContract",
+                "ChaingesNFTContract",
+                "ChaingesMarketplaceContract"
+            ]
+        }
+    }
+}
